@@ -37,6 +37,7 @@ RUN sudo apt-get update && sudo apt update \
   nodejs \ 
   mongodb-org \ 
   parallel \ 
+  vim \
   && sudo apt install -y \ 
   yarn \
   redis-server \
@@ -57,6 +58,7 @@ RUN sudo yarn global add gulp-cli \
   && sudo rm -rf /home/lichess/build
 
 ADD run.sh /home/lichess/run.sh
+ADD inputrc /home/lichess/.inputrc
 
 # Use UTF-8 encoding.
 ENV LANG "en_US.UTF-8"
